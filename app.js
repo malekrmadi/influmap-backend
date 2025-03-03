@@ -9,7 +9,7 @@ const postRoutes = require('./routes/postRoutes');
 const friendshipRoutes = require('./routes/friendshipRoutes');
 const notificationRoutes = require('./routes/notificationRoutes');
 const businessRoutes = require('./routes/businessRoutes');
-const challengeRoutes = require('./routes/challengeRoutes');
+const challengeRoutes = require('./routes/challengeRoutes.js');
 
 const errorHandler = require('./middlewares/errorHandler');
 
