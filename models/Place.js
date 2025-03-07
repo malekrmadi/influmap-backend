@@ -21,3 +21,19 @@ const PlaceSchema = new mongoose.Schema(
 );
 
 module.exports = mongoose.model("Place", PlaceSchema);
+
+
+/* 
+{
+    "name": "Le Petit Bistro",
+    "description": "Un charmant restaurant français au cœur de la ville.",
+    "category": "Restaurant",
+    "location": {
+        "latitude": 48.8566,
+        "longitude": 2.3522
+    },
+    "rating": 4.5,
+    "reviewsCount": 120,
+    "tags": ["Français", "Gastronomie", "Terrasse"]
+}
+*/

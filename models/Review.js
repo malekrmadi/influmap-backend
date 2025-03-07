@@ -13,3 +13,15 @@ const ReviewSchema = new mongoose.Schema(
 );
 
 module.exports = mongoose.model("Review", ReviewSchema);
+
+
+/* 
+{
+    "userId": "603dcd12fc13ae4567000001",
+    "placeId": "603dcd12fc13ae4567000002",
+    "rating": 5,
+    "comment": "Super endroit, ambiance agréable !",
+    "media": ["https://example.com/image1.jpg", "https://example.com/image2.jpg"],
+    "verified": true
+}
+*/

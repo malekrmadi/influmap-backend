@@ -8,3 +8,11 @@ const friendshipSchema = new mongoose.Schema({
 const Friendship = mongoose.model('Friendship', friendshipSchema);
 
 module.exports = Friendship;
+
+
+/* 
+{
+    "followerId": "603dcd12fc13ae4567000001",
+    "followingId": "603dcd12fc13ae4567000002"
+}
+*/

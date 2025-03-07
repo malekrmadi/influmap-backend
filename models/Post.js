@@ -12,3 +12,15 @@ const postSchema = new mongoose.Schema({
 const Post = mongoose.model('Post', postSchema);
 
 module.exports = Post;
+
+
+/* 
+{
+    "userId": "603dcd12fc13ae4567000001",
+    "placeId": "603dcd12fc13ae4567000002",
+    "type": "Story",
+    "media": ["https://example.com/image1.jpg", "https://example.com/video1.mp4"],
+    "text": "Superbe coucher de soleil ici !",
+    "expiresAt": "2025-03-10T12:00:00Z"
+}
+*/

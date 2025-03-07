@@ -10,3 +10,13 @@ const notificationSchema = new mongoose.Schema({
 const Notification = mongoose.model('Notification', notificationSchema);
 
 module.exports = Notification;
+
+
+/* 
+{
+    "userId": "603dcd12fc13ae4567000001",
+    "type": "Nouveau commentaire",
+    "message": "JohnDoe a commenté votre post.",
+    "isRead": false
+}
+*/

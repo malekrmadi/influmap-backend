@@ -15,3 +15,14 @@ const challengeSchema = new mongoose.Schema({
 const Challenge = mongoose.model('Challenge', challengeSchema);
 
 module.exports = Challenge;
+
+
+/* 
+{
+    "title": "Challenge Photo",
+    "description": "Partage une photo de ton plat préféré.",
+    "reward": "Badge",
+    "startDate": "2025-03-01T00:00:00Z",
+    "endDate": "2025-03-10T23:59:59Z"
+}
+*/

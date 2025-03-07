@@ -21,3 +21,17 @@ const businessSchema = new mongoose.Schema({
 const Business = mongoose.model('Business', businessSchema);
 
 module.exports = Business;
+
+
+/* 
+{
+    "ownerId": "603dcd12fc13ae4567000001",
+    "placeId": "603dcd12fc13ae4567000002",
+    "subscriptionPlan": "Premium",
+    "offers": ["20% de réduction", "Offre spéciale sur les cocktails"],
+    "analytics": {
+        "views": 1200,
+        "visits": 300
+    }
+}
+*/

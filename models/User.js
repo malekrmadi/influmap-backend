@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-const { v4: uuidv4 } = require('uuid');
+
 const bcrypt = require('bcryptjs');
 
 const UserSchema = new mongoose.Schema({
-    //id: { type: String, default: uuidv4, unique: true }, // UUID
+    
     username: { type: String, required: true, unique: true },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
@@ -22,3 +22,18 @@ UserSchema.pre('save', async function (next) {
 });
 
 module.exports = mongoose.model('User', UserSchema);
+
+
+
+/* 
+{
+    "username": "JohnDoe",
+    "email": "johndoe@example.com",
+    "password": "securepassword",
+    "avatar": "https://example.com/avatar.jpg",
+    "bio": "Développeur passionné",
+    "level": 1,
+    "badges": ["Newbie", "Explorer"]
+}
+*/
+
