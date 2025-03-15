@@ -75,3 +75,21 @@ exports.getNearbyPlaces = async (req, res) => {
     res.status(500).json({ message: "Erreur serveur", error });
   }
 };
+
+// ➤ Récupérer les lieux par catégorie
+exports.getPlacesByCategory = async (req, res) => {
+  try {
+    const { category } = req.params;
+    const validCategories = ["Restaurant", "Café", "Bar", "Événement", "Autre"];
+
+    if (!validCategories.includes(category)) {
+      return res.status(400).json({ message: "Catégorie invalide" });
+    }
+
+    const places = await Place.find({ category });
+    res.status(200).json(places);
+  } catch (error) {
+    res.status(500).json({ message: "Erreur serveur", error });
+  }
+};
+

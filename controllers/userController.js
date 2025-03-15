@@ -87,3 +87,14 @@ exports.getUserById = async (req, res) => {
         res.status(500).json({ message: "Erreur serveur", error });
     }
 };
+
+// 🔹 Récupérer tous les utilisateurs (Read All)
+exports.getAllUsers = async (req, res) => {
+    try {
+        const users = await User.find();
+        res.json(users);
+    } catch (error) {
+        res.status(500).json({ message: "Erreur serveur", error });
+    }
+};
+

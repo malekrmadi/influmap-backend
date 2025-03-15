@@ -52,3 +52,26 @@ exports.getFollowers = async (req, res) => {
         res.status(500).json({ message: 'Erreur serveur', error });
     }
 };
+
+// 📌 Récupérer le nombre de followers d'un utilisateur
+exports.getFollowersCount = async (req, res) => {
+    try {
+        const { userId } = req.params;
+        const count = await Friendship.countDocuments({ followingId: userId });
+        res.json({ followersCount: count });
+    } catch (error) {
+        res.status(500).json({ message: 'Erreur serveur', error });
+    }
+  };
+  
+  // 📌 Récupérer le nombre de personnes suivies par un utilisateur
+  exports.getFollowingCount = async (req, res) => {
+    try {
+        const { userId } = req.params;
+        const count = await Friendship.countDocuments({ followerId: userId });
+        res.json({ followingCount: count });
+    } catch (error) {
+        res.status(500).json({ message: 'Erreur serveur', error });
+    }
+  };
+  

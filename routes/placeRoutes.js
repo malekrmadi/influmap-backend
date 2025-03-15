@@ -9,6 +9,8 @@ router.get("/", placeController.getAllPlaces);
 router.get("/:id", placeController.getPlaceById);
 router.put("/:id",  placeController.updatePlace);
 router.delete("/:id",  placeController.deletePlace);
+router.get('/category/:category', placeController.getPlacesByCategory); // Récupérer les lieux par catégorie
+
 
 // Récupérer les lieux autour d'un utilisateur
 router.get("/nearby", placeController.getNearbyPlaces);
