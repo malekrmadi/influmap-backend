@@ -3,6 +3,7 @@ const router = express.Router();
 const postController = require('../controllers/postController');
 
 // 📌 Routes CRUD pour les publications
+router.get('/all', postController.getAllPosts);
 router.post('/', postController.createPost); // Ajouter une publication
 router.delete('/:id', postController.deletePost); // Supprimer une publication
 router.get('/place/:placeId', postController.getPostsByPlace); // Voir les publications d’un lieu

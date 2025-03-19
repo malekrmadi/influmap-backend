@@ -1,5 +1,16 @@
 const Post = require('../models/Post');
 
+
+// 📌 Récupérer toutes les publications
+exports.getAllPosts = async (req, res) => {
+    try {
+        const posts = await Post.find().populate('userId', 'username avatar').populate('placeId', 'name category');
+        res.json(posts);
+    } catch (error) {
+        res.status(500).json({ message: 'Erreur serveur', error });
+    }
+};
+
 // 📌 Ajouter une publication
 exports.createPost = async (req, res) => {
     try {
