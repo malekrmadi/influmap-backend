@@ -18,6 +18,8 @@ module.exports = Post;
 {
     "userId": "603dcd12fc13ae4567000001",
     "placeId": "603dcd12fc13ae4567000002",
+    "userId": "603dcd12fc13ae4567000001",
+    "placeId": "603dcd12fc13ae4567000002",
     "type": "Story",
     "media": ["https://example.com/image1.jpg", "https://example.com/video1.mp4"],
     "text": "Superbe coucher de soleil ici !",
